@@ -1,6 +1,5 @@
 # Flutter初探
-
-![1539587107(1)](C:\Users\Administrator\Desktop\Flutter初探\1539587107(1).jpg)
+![1539587107(1)](http://github.com/PorterKing/flutter_app/raw/master/readme_images/1539587107(1).jpg)
 
 > 本文主要大致介绍Flutter 整体框架，简单粗略的使用，深度暂且还没有。
 >
@@ -29,7 +28,7 @@ Flutter是一个使用Dart语言开发的跨平台移动UI框架,通过自建绘
 
 
 
-![1539509311(1)](C:\Users\Administrator\Desktop\Flutter初探\1539509311(1).jpg)
+![1539509311(1)](http://github.com/PorterKing/flutter_app/raw/master/readme_images/1539509311(1).jpg)
 
 1. dart具有JIT&AOT双重编译执行方式。这样就能利用JIt进行开发阶段的hot reload开发，提升研发效率。同时在最终release版本中使用aot将dart代码直接变成目标平台的指令集代码。简单高效，最大限度保障了性能，最大限度减少包的大小，目前刚更新flutter preview2.0 对包的大小进一步缩减。
 2. dart针对flutter中频繁创建销毁Widget的场景做了专门的gc优化。通过分代无锁垃圾回收器，将gc对性能的影响降至最低。
@@ -60,7 +59,7 @@ Flutter是一个使用Dart语言开发的跨平台移动UI框架,通过自建绘
 
 ### 5、flutter--widget
 
-![1539570669(1)](C:\Users\Administrator\Desktop\Flutter初探\1539570669(1).jpg)
+![1539570669(1)](http://github.com/PorterKing/flutter_app/raw/readme_images/1539570669(1).jpg)
 
 上述图中可以看到：
 
@@ -70,7 +69,7 @@ Flutter是一个使用Dart语言开发的跨平台移动UI框架,通过自建绘
 
 虽然深入下去的 暂时还不懂，不难看出widget是我们所能涉及到开发的那一层。Flutter 的核心设计思想便是**Everything’s a Widget** 即一切即Widget。在flutter的世界里，包括views,view controllers,layouts等在内的概念都建立在Widget之上。widget是flutter功能的抽象描述。所以掌握Flutter的基础就是学会使用widget开始。
 
-![1539570893(1)](C:\Users\Administrator\Desktop\Flutter初探\1539570893(1).jpg)
+![1539570893(1)](http://github.com/PorterKing/flutter_app/raw/readme_images/1539570893(1).jpg)
 
 由widget展开的基础组件，布局，交互等；
 
@@ -102,7 +101,7 @@ Flutter是一个使用Dart语言开发的跨平台移动UI框架,通过自建绘
 
 ### 2、布局
 
-![fef361039bdd30af7dd5a4cab38fbf8](C:\Users\Administrator\Desktop\Flutter初探\fef361039bdd30af7dd5a4cab38fbf8.png)
+![fef361039bdd30af7dd5a4cab38fbf8](http://github.com/PorterKing/flutter_app/raw/readme_images/fef361039bdd30af7dd5a4cab38fbf8.png)
 
 **1、 布局拆封：**
 
@@ -127,7 +126,7 @@ StatelessWidget（无状态）:UI纯展示作用，无交互以及UI变化，例
 
 StatefulWidget（有状态）:程序运行中，UI发生变化的，以及用户交互的；
 
-![1539603681(1)](C:\Users\Administrator\Desktop\Flutter初探\1539603681(1).jpg)
+![1539603681(1)](http://github.com/PorterKing/flutter_app/raw/readme_images/1539603681(1).jpg)
 
 State的生命周期有四种状态：
 
@@ -157,7 +156,7 @@ getData() async {    //async关键字声明该函数内部有代码需要延迟�
 
 就直接会报错
 
-![1539745314(1)](C:\Users\Administrator\Desktop\Flutter初探\1539745314(1).jpg)
+![1539745314(1)](http://github.com/PorterKing/flutter_app/raw/readme_images/1539745314(1).jpg)
 
 因为`data`是**String**类型，而函数`getData()`是一个异步操作函数，其返回值是一个`await`延迟执行的结果。在Dart中，有`await`标记的运算，其结果值都是一个`Future`对象，`Future`不是**String**类型，所以就报错了
 
@@ -181,7 +180,7 @@ getData().then(data){
 
 问题：由Flutter目录再分别包含Native工程的目录（即ios和android两个目录）组成。默认情况下，引入了Flutter的Native工程无法脱离父目录进行独立构建和运行，因为它会反向依赖于Flutter相关的库和资源
 
-![qqqq](C:\Users\Administrator\Desktop\Flutter初探\qqqq.png)
+![qqqq](http://github.com/PorterKing/flutter_app/raw/readme_images/qqqq.png)
 
 [闲鱼针对项目混合开发改造实践](https://juejin.im/post/5b3f098ce51d45199840f4bb)
 
